@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "yangjin";
+  src: url("/public/fonts/yangjin.woff") format(‘woff’);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Nanum Gothic",
+    "Malgun Gothic", sans-serif;
+  position: relative;
+  box-sizing: border-box;
+  position: relative;
+  color: #393939;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  background-color: #efeff5;
+}
+
+$styled-white-text: ffffffb9;

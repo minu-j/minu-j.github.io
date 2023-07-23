@@ -1,0 +1,31 @@
+.background {
+  margin-top: 60px;
+  max-width: 980px;
+  width: 100vw;
+  padding: 0px 20px 20px 20px;
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    margin-bottom: 8px;
+  }
+}
+
+.link {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: underline 2px solid #9f75de;
+  letter-spacing: -1px;
+  background: radial-gradient(
+    980px 100% at 50% 100%,
+    #9f75de 0%,
+    #5542c0 37.5%,
+    #322bab 59.38%,
+    #071d4c 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,93 @@
+.background {
+  margin-top: 60px;
+  max-width: 980px;
+  width: 100vw;
+  padding: 0px 20px 20px 20px;
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    margin-bottom: 8px;
+  }
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > p {
+    color: #ffffffb9;
+  }
+
+  & svg {
+    margin-bottom: 8px;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  word-break: keep-all;
+  background: radial-gradient(
+    121.19% 100% at 50% 100%,
+    #77e1dc 0%,
+    #41c9c2 37.5%,
+    #49b6e3 59.38%,
+    #1293c8 100%
+  );
+  letter-spacing: -0.15rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    width: 33.3%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    & > svg {
+      width: 3rem;
+      height: 3rem;
+      fill: #393939;
+      margin-bottom: 20px;
+    }
+    & > h5 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    & > div {
+      font-weight: 700;
+      & > span {
+        background: radial-gradient(
+          121.19% 100% at 50% 100%,
+          #77e1dc 0%,
+          #41c9c2 37.5%,
+          #49b6e3 59.38%,
+          #1293c8 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+      }
+      & > span:first-child {
+        font-size: 3rem;
+      }
+    }
+  }
+}

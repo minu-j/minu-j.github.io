@@ -1,0 +1,69 @@
+.background {
+  width: 100vw;
+  height: 260px;
+  background: radial-gradient(
+    121.19% 100% at 50% 100%,
+    #071d4c 0%,
+    #312babf2 24.48%,
+    #5542c0ea 40.63%,
+    #9f75dec9 66.15%,
+    #efeff500 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  margin-top: 88px;
+  line-height: 1.1;
+  font-weight: 900;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.7) 0.01%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  letter-spacing: -2px;
+  animation: both float-up 2s 0.3s;
+}
+
+.footer {
+  width: 100%;
+  max-width: 980px;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-inline: 20px;
+}
+
+.memoji {
+  position: absolute;
+  bottom: 0px;
+}
+
+.link {
+  & > a {
+    color: #ffffffb9;
+    margin-left: 8px;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+}
+
+.info {
+  font-weight: 600;
+  font-size: 0.75rem;
+  & > p:first-child {
+    margin-bottom: 8px;
+  }
+  & > p {
+    color: #ffffffb9;
+  }
+}
