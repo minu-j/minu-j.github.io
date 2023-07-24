@@ -22,6 +22,7 @@ export default function Education({
             loop
             autoPlay
             muted
+            playsInline
             style={{
               position: "absolute",
               left: "0px",
