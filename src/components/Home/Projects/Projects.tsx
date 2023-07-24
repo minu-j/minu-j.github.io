@@ -19,6 +19,7 @@ export default function Projects({ scrollPosition, screenVh }: projectsProps) {
             loop
             autoPlay
             muted
+            playsInline
             style={{
               position: "absolute",
               left: "0px",
