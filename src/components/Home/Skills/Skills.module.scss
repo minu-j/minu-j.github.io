@@ -1,5 +1,5 @@
 .background {
-  margin-top: 60px;
+  margin-top: 120px;
   max-width: 980px;
   width: 100vw;
   padding: 0px 20px 20px 20px;
@@ -8,37 +8,182 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.05rem;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
   }
 }
 
-.content {
-  height: 100%;
+.container {
+  & > div:first-child {
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.grid {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
-  & > p {
-    color: #ffffffb9;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 
-  & svg {
-    margin-bottom: 8px;
+  & > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+      width: 100% !important;
+    }
+
+    & svg {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 8px;
+    }
+  }
+
+  & p {
+    line-height: 1.2;
+  }
+
+  & h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+  }
+  & h5 {
+    margin-top: 4px;
   }
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  word-break: keep-all;
-  background: radial-gradient(
-    150% 100% at 50% 100%,
-    #68d1cc 0%,
-    #35b6b0 37.5%,
-    #3c9dc7 59.38%,
-    #1197cd 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.etc {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & svg,
+  img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  & > div {
+    display: flex;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 180px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.05rem;
+    }
+  }
+  & > div:first-child {
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.js {
+  z-index: 2;
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 0px 120px -40px #f7df1e;
+
+    & svg {
+      fill: #3178c6;
+      box-shadow: 0px 0px 120px -40px #3178c6;
+    }
+    & svg:first-child {
+      fill: #f7df1e;
+      box-shadow: 0px 0px 120px -40px #f7df1e;
+    }
+    & h4 {
+      transition: color 0.1s;
+      color: #f7df1e;
+    }
+  }
+}
+.react {
+  z-index: 2;
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 0px 120px -40px #61dafb;
+
+    & svg {
+      fill: #61dafb;
+      box-shadow: 0px 0px 120px -40px #61dafb;
+    }
+    & h4 {
+      transition: color 0.1s;
+      color: #61dafb;
+    }
+  }
+}
+.python {
+  z-index: 2;
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 0px 120px -40px #3776ab;
+
+    & > svg {
+      fill: #3776ab;
+      box-shadow: 0px 0px 120px -40px #3776ab;
+    }
+    & h4 {
+      transition: color 0.1s;
+      color: #3776ab;
+    }
+  }
+}
+.git {
+  z-index: 2;
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 0px 120px -40px #f05032;
+
+    & > svg {
+      fill: #f05032;
+      box-shadow: 0px 0px 120px -40px #f05032;
+    }
+    & h4 {
+      transition: color 0.1s;
+      color: #f05032;
+    }
+  }
+}
+.flutter {
+  z-index: 2;
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 0px 120px -40px #02569b;
+
+    & > svg {
+      fill: #02569b;
+      box-shadow: 0px 0px 120px -40px #02569b;
+    }
+    & h4 {
+      transition: color 0.1s;
+      color: #02569b;
+    }
+  }
 }

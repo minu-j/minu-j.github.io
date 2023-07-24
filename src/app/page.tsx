@@ -22,12 +22,22 @@ export default function Home() {
   const getScreenVh = () => {
     const vhValue = window.innerHeight;
     setScreenVh(vhValue);
-    console.log(screenVh);
   };
   const handleMouseMove = (e: any) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
   useEffect(() => {
+    console.log(`     ____  ___  _______  
+ __ / / / / / |/ / ___/  
+/ // / /_/ /    / (_ /   
+\\___/\\____/_/|_/\\___/  __
+  /  |/  /  _/ |/ / / / /
+ / /|_/ // //    / /_/ / 
+/_/  /_/___/_/|_/\\____/  
+                            
+Front-end Developer Portfolio
+
+My GitHub : https://github.com/minu-j/`);
     getScreenVh();
     window.addEventListener("scroll", handleScreen);
     window.addEventListener("resize", getScreenVh);
@@ -49,13 +59,15 @@ export default function Home() {
       <Projects scrollPosition={scrollPosition} screenVh={screenVh} />
       <Contect scrollPosition={scrollPosition} screenVh={screenVh} />
       <Footer />
-      <div
-        className={styles.cursor}
-        style={{
-          top: mousePosition.y - 300,
-          left: mousePosition.x - 300,
-        }}
-      ></div>
+      {mousePosition.y ? (
+        <div
+          className={styles.cursor}
+          style={{
+            top: mousePosition.y - 500,
+            left: mousePosition.x - 500,
+          }}
+        ></div>
+      ) : null}
     </main>
   );
 }

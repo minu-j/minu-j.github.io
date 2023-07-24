@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0.25rem 0.25rem 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: -2;
+  z-index: -100;
 }
 
 .name-box {
@@ -23,10 +23,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & > div {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 200px;
+  }
 }
 
 .name {
-  line-height: 1.1;
   font-weight: 900;
   background: linear-gradient(
     180deg,
@@ -38,16 +46,58 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  font-size: 1.25rem;
+  animation: both float-up 2.5s 0.6s;
+
   &-kor {
-    font-size: 24vw;
+    font-size: 10rem;
     letter-spacing: -2px;
     animation: both float-up 2s 0.3s;
+    @media (max-width: 768px) {
+      font-size: 23vw;
+    }
   }
   &-eng {
-    font-size: 12vw;
-    margin-bottom: 5rem;
+    font-size: 5rem;
     letter-spacing: -2px;
     animation: both float-up 3s 0.3s;
+    @media (max-width: 768px) {
+      font-size: 12vw;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  & > a {
+    width: 48px;
+    font-size: 0.75rem;
+    letter-spacing: -0.05rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    margin-right: 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.7) 0.01%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      fill: rgba(255, 255, 255, 0.4);
+      margin-bottom: 8px;
+    }
+    animation: both float-up 3s 0.6s;
+  }
+  & > a:last-child {
+    margin-right: 0px;
   }
 }
 
@@ -68,6 +118,7 @@
 }
 
 .memoji {
+  z-index: 10;
   position: absolute;
   bottom: 0px;
   animation: both brightness-in 3.3s 0s;

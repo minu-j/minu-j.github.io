@@ -13,9 +13,10 @@ export default function Footer() {
           <p>© 2023 JUNG MINU</p>
         </div>
         <div className={styles.link}>
-          <a href="#">GitHub</a>
-          <a href="#">velog</a>
-          <a href="#">Instagram</a>
+          <a href="https://github.com/minu-j">GitHub</a>
+          <a href="https://velog.io/@minu-j">velog</a>
+          <a href="https://www.youtube.com/@minu-j">YouTube</a>
+          <a href="https://www.instagram.com/_minu.j/">Instagram</a>
         </div>
       </div>
       <Image
