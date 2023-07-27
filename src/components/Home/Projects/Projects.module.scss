@@ -11,28 +11,82 @@
     margin-bottom: 24px;
   }
 
-  & > section {
+  & > a {
+    text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    & > div {
-      display: flex;
-      align-items: center;
+    transition: scale 0.3s;
+    &:hover {
+      scale: 1.05;
+      cursor: pointer;
+    }
 
-      & > span {
-        font-size: 1.25rem;
-        font-weight: 700;
-        letter-spacing: -0.05rem;
-        margin-right: 8px;
-        color: #ffffffb9;
-        margin-bottom: -0.1rem;
-      }
-      & > svg {
-        width: 1.25rem;
-        height: 1.25rem;
-        fill: #ffffffb9;
-      }
+    & > span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.05rem;
+      margin-right: 8px;
+      margin-bottom: -0.1rem;
+      text-decoration: none;
+    }
+    & > svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.title {
+  margin-block: 60px;
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: radial-gradient(
+    980px 100% at 50% 100%,
+    #9f75de 0%,
+    #5542c0 37.5%,
+    #322bab 59.38%,
+    #071d4c 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 5rem;
+  }
+}
+
+.grid {
+  width: 100%;
+  max-width: 980px;
+  margin-inline: -10px;
+  margin-bottom: 20px;
+}
+
+.fortytwo {
+  z-index: 2;
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 0px 120px -40px #f7df1e;
+
+    & svg {
+      fill: #3178c6;
+      box-shadow: 0px 0px 120px -40px #3178c6;
+    }
+    & svg:first-child {
+      fill: #f7df1e;
+      box-shadow: 0px 0px 120px -40px #f7df1e;
+    }
+    & h4 {
+      transition: color 0.1s;
+      color: #f7df1e;
     }
   }
 }

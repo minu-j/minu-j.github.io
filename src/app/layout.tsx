@@ -10,6 +10,21 @@ const inter = Noto_Sans_KR({
 export const metadata = {
   title: "MINU`s portfolio",
   description: "Front-end developer Jung Minu`s portfolio",
+  openGraph: {
+    title: "MINU`s portfolio",
+    description: "Front-end developer Jung Minu`s portfolio",
+    url: "https://minu-j.github.io",
+    siteName: "MINU`s portfolio",
+    images: [
+      {
+        url: "https://drive.google.com/uc?id=1bq7uOTMge66eB2YHTz9pYqlMQz9LPLWf",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
