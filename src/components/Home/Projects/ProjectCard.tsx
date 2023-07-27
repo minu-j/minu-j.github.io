@@ -9,6 +9,7 @@ interface projectCardProps {
     title: string;
     date: string;
     skills: Array<IconType>;
+    award?: string;
     image: string;
     content: string;
     github: string;
@@ -37,6 +38,7 @@ export default function ProjectCard({ data }: projectCardProps) {
       </Card>
       <div className={styles.text}>
         <h2 className={styles.title}>{data.title}</h2>
+        <p className={styles.award}>{data.award ? data.award : null}</p>
         <p className={styles.content}>{data.content}</p>
         <div className={styles.link}>
           <a onClick={() => window.open(data.github)}>
