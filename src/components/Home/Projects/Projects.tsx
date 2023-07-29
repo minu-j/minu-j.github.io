@@ -20,12 +20,7 @@ import {
   SiXcode,
 } from "react-icons/si";
 
-interface projectsProps {
-  scrollPosition: number;
-  screenVh: number;
-}
-
-export default function Projects({ scrollPosition, screenVh }: projectsProps) {
+export default function Projects() {
   const data = [
     {
       title: "42",

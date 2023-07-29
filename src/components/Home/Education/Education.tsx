@@ -3,15 +3,7 @@ import Card from "../../common/Card/Card";
 import styles from "./Education.module.scss";
 import { BsPeopleFill, BsAwardFill, BsHandThumbsUpFill } from "react-icons/bs";
 
-interface educationProps {
-  scrollPosition: number;
-  screenVh: number;
-}
-
-export default function Education({
-  scrollPosition,
-  screenVh,
-}: educationProps) {
+export default function Education() {
   return (
     <section className={styles.background}>
       <h3>Education</h3>

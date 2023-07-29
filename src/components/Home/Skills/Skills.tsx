@@ -13,12 +13,7 @@ import {
 import finalCutProLogo from "@/public/images/finalCutProLogo.png";
 import Image from "next/image";
 
-interface skillsProps {
-  scrollPosition: number;
-  screenVh: number;
-}
-
-export default function Skills({ scrollPosition, screenVh }: skillsProps) {
+export default function Skills() {
   return (
     <section className={styles.background}>
       <h3>Skills</h3>

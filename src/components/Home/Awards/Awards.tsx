@@ -1,12 +1,7 @@
 import React from "react";
 import styles from "./Awards.module.scss";
 
-interface awardsProps {
-  scrollPosition: number;
-  screenVh: number;
-}
-
-export default function Awards({ scrollPosition, screenVh }: awardsProps) {
+export default function Awards() {
   return (
     <section className={styles.background}>
       <h3>Awards</h3>

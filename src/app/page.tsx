@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import * as gtag from "@/lib/gtag";
+import Script from "next/script";
 import styles from "./page.module.scss";
 import Cover from "../components/Home/Cover/Cover";
 import Education from "../components/Home/Education/Education";
@@ -9,6 +11,7 @@ import Awards from "../components/Home/Awards/Awards";
 import Contect from "../components/Home/Contect/Contect";
 import Projects from "../components/Home/Projects/Projects";
 import Skills from "../components/Home/Skills/Skills";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -51,23 +54,35 @@ My GitHub : https://github.com/minu-j/`);
   }, []);
 
   return (
-    <main className={styles.main}>
-      <Cover scrollPosition={scrollPosition} screenVh={screenVh} />
-      <Education scrollPosition={scrollPosition} screenVh={screenVh} />
-      <Awards scrollPosition={scrollPosition} screenVh={screenVh} />
-      <Skills scrollPosition={scrollPosition} screenVh={screenVh} />
-      <Projects scrollPosition={scrollPosition} screenVh={screenVh} />
-      <Contect scrollPosition={scrollPosition} screenVh={screenVh} />
-      <Footer />
-      {mousePosition.y ? (
-        <div
-          className={styles.cursor}
-          style={{
-            top: mousePosition.y - 500,
-            left: mousePosition.x - 500,
-          }}
-        ></div>
-      ) : null}
-    </main>
+    <>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VPJFGK953F" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-VPJFGK953F');
+        `}
+      </Script>
+      <main className={styles.main}>
+        <Cover scrollPosition={scrollPosition} screenVh={screenVh} />
+        <Education />
+        <Awards />
+        <Skills />
+        <Projects />
+        <Contect />
+        <Footer />
+        {mousePosition.y ? (
+          <div
+            className={styles.cursor}
+            style={{
+              top: mousePosition.y - 500,
+              left: mousePosition.x - 500,
+            }}
+          ></div>
+        ) : null}
+      </main>
+    </>
   );
 }
