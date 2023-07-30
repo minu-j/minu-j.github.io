@@ -19,6 +19,10 @@ import {
   SiVuedotjs,
   SiXcode,
 } from "react-icons/si";
+import cocook from "@/public/images/cocook.svg";
+import argos from "@/public/images/argos.svg";
+import mlj from "@/public/images/mlj.svg";
+import fortytwo from "@/public/images/fortytwo.svg";
 
 export default function Projects() {
   const data = [
@@ -26,7 +30,9 @@ export default function Projects() {
       title: "42",
       date: "2023.04.~2023.05.",
       skills: [SiTypescript, SiReact, SiFirebase, SiGit, SiFigma],
-      image: "1YvAF0NMYV6g0QKPsPSR-X0HRPCjrsN00",
+      color: "#3644FC",
+      image: fortytwo,
+      video: "fortytwo",
       content: `사이는 일상 속 내 주변을 스쳐 지나가는 인연들에 대한 호기심에서 시작되었습니다. 
       주변 생각을 피드에 기록하고, 우연히 다시 마주친 익명의 낯선 인연과의 만남을 
       알려주는 위치기반 익명 SNS 서비스입니다.`,
@@ -38,7 +44,9 @@ export default function Projects() {
       title: "Co-cook!",
       date: "2023.02.~2023.04.",
       skills: [SiDart, SiFlutter, SiXcode, SiAndroidstudio, SiGit, SiFigma],
-      image: "1r7oXn9D8QKJERO_1lbhUni3med0Jt9fi",
+      color: "#D91A08",
+      image: cocook,
+      video: "cocook",
       award: "삼성 청년 SW 아카데미 우수 프로젝트 수상",
       content: `Co-cook!은 요리 중 스마트폰을 손으로 만지기 어렵다는 점에 착안한 서비스로
       AI기반 음성인식 기술로 음성 명령을 인식하여 레시피를 제어할 수 있는
@@ -51,7 +59,9 @@ export default function Projects() {
       title: "마이 리틀 쥬라기",
       date: "2023.01.~2023.02.",
       skills: [SiTypescript, SiReact, SiRedux, SiGit, SiFigma],
-      image: "1W71NuV1ZaKgHdAQQcUwN6yvMzzRKeUxo",
+      color: "#14A647",
+      image: mlj,
+      video: "mlj",
       content: `마이리틀 쥬라기는 최근 떠오르는 이색 반려동물 시장을 공략한
       전국 이색 반려동물 샵 통합 관리 서비스입니다.
       체험 이벤트 예약과 실시간 방송 중계 모니터링을 지원합니다.`,
@@ -71,7 +81,9 @@ export default function Projects() {
         SiGit,
         SiFigma,
       ],
-      image: "1A22COM8zn2mWMacCspvkW3qToRvX2Nb0",
+      color: "#252525",
+      image: argos,
+      video: "argos",
       award: "삼성 청년 SW 아카데미 최우수 프로젝트 수상",
       content: `ARGOS는 자체적인 알고리즘을 통해 사용자의 영화 평가 데이터를 기반으로 한 개인 맞춤형 영화 추천 서비스입니다.`,
       github: "https://github.com/minu-j/Argos",

@@ -17,8 +17,11 @@ export default function Education() {
             playsInline
             style={{
               position: "absolute",
-              left: "0px",
               top: "0px",
+              left: "0px",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
               filter: "brightness(0.5) grayscale(0.8)",
             }}
           ></video>

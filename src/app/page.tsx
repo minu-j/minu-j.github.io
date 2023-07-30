@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import * as gtag from "@/lib/gtag";
 import Script from "next/script";
 import styles from "./page.module.scss";
 import Cover from "../components/Home/Cover/Cover";
