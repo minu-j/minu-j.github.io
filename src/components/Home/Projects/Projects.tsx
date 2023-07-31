@@ -102,7 +102,7 @@ export default function Projects() {
       <a
         onClick={() =>
           window.open(
-            "https://drive.google.com/file/d/1knkPv8jLGlzB7KdUAr0fUxgj3onHktHz/view"
+            "https://drive.google.com/file/d/1HSwLNUJo9cs7zCqDPWAwWgEveOuaHDP5/view"
           )
         }
       >
